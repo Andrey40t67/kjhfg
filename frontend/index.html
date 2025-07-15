@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator (Kandinsky)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Генератор изображений 🎨</h1>
+        <p>Создано с помощью API Kandinsky от Сбера</p>
+
+        <div class="form-container">
+            <textarea id="prompt-input" placeholder="Введите ваш запрос, например: 'Рыжий кот в очках космонавта'"></textarea>
+            
+            <label for="style-select">Выберите стиль:</label>
+            <select id="style-select">
+                <option value="">Стандартный</option>
+                </select>
+            
+            <button id="generate-btn">Сгенерировать</button>
+        </div>
+
+        <div id="loader" class="loader" style="display: none;"></div>
+        <p id="status-text"></p>
+
+        <div class="result-container">
+            <h2>Результат:</h2>
+            <div id="image-wrapper">
+                 <p class="placeholder-text">Здесь появится ваше изображение...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
